@@ -17,7 +17,7 @@ unzip -o /tmp/sanacode.zip -d /tmp/
 cp -r /tmp/sanacode-main/* "$INSTALL_DIR"
 
 echo "Installing Python dependencies..."
-python3 -m pip install --user -r "$INSTALL_DIR/requirements.txt"
+python3 -m pip install --break-system-packages -r "$INSTALL_DIR/requirements.txt"
 
 echo "Creating CLI command..."
 echo '#!/bin/bash
